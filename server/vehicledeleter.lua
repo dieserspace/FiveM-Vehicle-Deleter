@@ -37,7 +37,7 @@ function VehicleDeleter:Init()
                 self.vehicles[vehicle] = 0
             end
 
-            if(#self.deleteableVehicles > Config.DeleteAfter) then
+            if(#self.deleteableVehicles >= Config.DeleteAfter) then
                 TriggerClientEvent('ox_lib:notify', -1, {
                     title = 'Vehicle Deleter',
                     description = string.format('Es wurden %s Fahrzeuge entfernt', #self.deleteableVehicles),
