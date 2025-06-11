@@ -46,6 +46,12 @@ function VersionChecker:CheckVersion()
             string.format('^7New Version found at: ^1%s^7', 'https://github.com/dieserspace/FiveM-Vehicle-Deleter/'),
             ' '
         )
+    else
+        self:Print(
+            ' ',
+            '^2Resource is currently up-to-date^7',
+            ' '
+        )
     end
 
 end
