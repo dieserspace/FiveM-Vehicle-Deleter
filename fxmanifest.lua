@@ -6,7 +6,12 @@ description "A Useful Vehicle Deleter"
 author "Space"
 version "1.0.0"
 
+files {
+	'version.txt'
+}
+
 server_scripts {
+	'server/versionchecker.lua',
 	'server/vehicledeleter.lua',
 	'server/main.lua'
 }
