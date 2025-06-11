@@ -37,11 +37,14 @@ end
 function VersionChecker:CheckVersion()
 
     local versionPromise = self:FetchLatestVersion()
-    local version = Citizen.Await(latestVersion)
+    local version = Citizen.Await(versionPromise)
 
     if (self:GetCurrentVersion() ~= version) then
         self:Print(
-            string.format('^1Resource currently outdated. ^2%s ^0→ ^1%s', self:GetCurrentVersion(), version)
+            ' ',
+            string.format('^7Resource currently outdated. ^2%s ^7→ ^1%s^7', self:GetCurrentVersion(), version),
+            string.format('^7New Version found at: ^1%s^7', 'https://github.com/dieserspace/FiveM-Vehicle-Deleter/'),
+            ' '
         )
     end
 
